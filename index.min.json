@@ -1,0 +1,61 @@
+{
+  "name": "100Girlfriends",
+  "version": 1,
+  "description": "Reads chapters from the100girlfriends.com",
+  "baseUrl": "https://the100girlfriends.com",
+  "catalogue": {
+    "popular": {
+      "url": "/",
+      "method": "GET",
+      "selector": {
+        "item": "body",
+        "id": "/",
+        "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+        "image": "img@src"
+      }
+    },
+    "latest": {
+      "url": "/",
+      "method": "GET",
+      "selector": {
+        "item": "body",
+        "id": "/",
+        "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+        "image": "img@src"
+      }
+    },
+    "search": {
+      "url": "/",
+      "method": "GET",
+      "params": {},
+      "selector": {
+        "item": "body",
+        "id": "/",
+        "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+        "image": "img@src"
+      }
+    }
+  },
+  "manga": {
+    "selector": {
+      "title": "h1@text",
+      "description": "p@text",
+      "image": "img@src",
+      "author": "body",
+      "status": "body"
+    },
+    "chapters": {
+      "list": {
+        "selector": "a.chap-link",
+        "id": "@href",
+        "name": "@text",
+        "date": ""
+      }
+    }
+  },
+  "chapter": {
+    "selector": {
+      "images": ".reading-content img@src"
+    }
+  }
+}
